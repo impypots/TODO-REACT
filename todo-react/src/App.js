@@ -1,20 +1,26 @@
 import './App.css';
 import { useState } from 'react';
-import StarRating from './StarRating'
+import StarRating from './StarRating';
+import TopMenu from './TopMenu';
+import AddItem from './AddItem';
 
 function App() {
-  const [count, setCount] = useState(0)
-  
-  const [,secondfishy] = ["small fishy", "big fishy", "yellow fishy"];
-
-console.log(secondfishy)   
+  const [listArray, setList] = useState([
+    "Go gym",
+    "Buy groceries",
+    "Eat big fishy",
+    "Go to andromeda (Fun vacation)."
+  ])
 
   return (
     <>
-    <button onClick={() => setCount(count + 1)}>
-      {count}
-    </button>
-    <StarRating />
+    <TopMenu />
+    <div id="listContainer">
+      {listArray.map((n, i) => {
+        return <div className="listItem" key={i}>{n}</div>
+      })}
+    </div>
+    <AddItem /><br></br>
     </>
   );
 }
