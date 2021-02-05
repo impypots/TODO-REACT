@@ -68,6 +68,12 @@
   padding: 4vh;
   border-radius: 10px;
   width: 36vw;
+  transition: 1s 
+}
+
+#listItem0 {
+  opacity: 1;
+  transition: opacity 1s;
 }
 
 .listItem button {

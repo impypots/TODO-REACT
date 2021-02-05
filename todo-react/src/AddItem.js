@@ -9,7 +9,7 @@ function AddItem({ setList }) {
     }
 
     function submitItem(e) {
-        if(nextItem) {
+        if(nextItem !== '') {
             e.preventDefault();
             setList(prev => prev.concat(nextItem));
             document.querySelector("#AddItem input").value = '';

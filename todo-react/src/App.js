@@ -7,13 +7,21 @@ import Data from './Data';
 function App() {
   const [listArray, setList] = useState(Data)
 
+  function removeItem(key) {
+    console.log(key + "KEY")
+    
+    const newList = listArray.filter(item => listArray.indexOf(item) !== key);
+
+    setList(newList);
+  }
+
   return (
     <>
     <TopMenu />
     <div id="listContainer">
       {listArray.map((n, i) => {
-        return <div className="listItem" key={i}>{n}
-               <button>X</button></div>
+        return <div className="listItem" id={'listItem' + i} key={i}>{n}
+               <button onClick={() => removeItem(i)}>X</button></div>
       })}
     </div>
     <AddItem setList={setList} /><br></br>
