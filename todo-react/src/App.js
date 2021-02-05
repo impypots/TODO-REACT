@@ -1,26 +1,22 @@
 import './App.css';
 import { useState } from 'react';
-import StarRating from './StarRating';
 import TopMenu from './TopMenu';
 import AddItem from './AddItem';
+import Data from './Data';
 
 function App() {
-  const [listArray, setList] = useState([
-    "Go gym",
-    "Buy groceries",
-    "Eat big fishy",
-    "Go to andromeda (Fun vacation)."
-  ])
+  const [listArray, setList] = useState(Data)
 
   return (
     <>
     <TopMenu />
     <div id="listContainer">
       {listArray.map((n, i) => {
-        return <div className="listItem" key={i}>{n}</div>
+        return <div className="listItem" key={i}>{n}
+               <button>X</button></div>
       })}
     </div>
-    <AddItem /><br></br>
+    <AddItem setList={setList} /><br></br>
     </>
   );
 }
