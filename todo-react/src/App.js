@@ -5,11 +5,12 @@ import AddItem from './AddItem';
 import Data from './Data';
 
 function App() {
-  const [listArray, setList] = useState(Data)
+  const [listArray, setList] = useState(Data);
+  const [typeWork, setType] = useState("Work");
 
   function removeItem(key) {
     console.log(key + "KEY")
-    
+
     const newList = listArray.filter(item => listArray.indexOf(item) !== key);
 
     setList(newList);
@@ -20,11 +21,11 @@ function App() {
     <TopMenu />
     <div id="listContainer">
       {listArray.map((n, i) => {
-        return <div className="listItem" id={'listItem' + i} key={i}>{n}
+        return <div className='listItem' id={'listItem' + i} key={i}>{n}
                <button onClick={() => removeItem(i)}>X</button></div>
       })}
     </div>
-    <AddItem setList={setList} /><br></br>
+    <AddItem setList={setList} setType={setType} typeWork={typeWork} /><br></br>
     </>
   );
 }

@@ -62,7 +62,49 @@
   justify-content: space-between;
   align-items: center;
   color: white;
-  background-color: rgb(15, 139, 123);
+  background-color: #0f8b7b;
+  text-align: center;
+  margin: 2vh;
+  padding: 4vh;
+  border-radius: 10px;
+  width: 36vw;
+  transition: 1s 
+}
+
+.listItemWork {
+  background-color: #0f8b7b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  text-align: center;
+  margin: 2vh;
+  padding: 4vh;
+  border-radius: 10px;
+  width: 36vw;
+  transition: 1s 
+}
+
+.listItemHome {
+  background-color: yellow;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  text-align: center;
+  margin: 2vh;
+  padding: 4vh;
+  border-radius: 10px;
+  width: 36vw;
+  transition: 1s 
+}
+
+.listItemHealth {
+  background-color: purple;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
   text-align: center;
   margin: 2vh;
   padding: 4vh;
@@ -89,11 +131,16 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  color: white;
   background-color: rgb(15, 139, 123);
   border-radius: 10px;
   width: 36vw;
   margin: 2vh 30vw;
   min-height: 10vh;
+}
+
+#addItem label {
+  font-weight: bold;
 }
 
 #AddItem button {
