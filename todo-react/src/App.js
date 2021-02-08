@@ -1,5 +1,5 @@
 import './App.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import TopMenu from './TopMenu';
 import AddItem from './AddItem';
 import Data from './Data';
@@ -15,6 +15,10 @@ function App() {
 
     setList(newList);
   }
+
+  useEffect(() => {
+    document.title = 'To Do List :)'
+  })
 
   return (
     <>
